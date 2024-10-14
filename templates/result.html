@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        
+        <div class="result-container">
+            <div class="image-preview">
+                <h2>Uploaded Image</h2>
+                <!-- Display the uploaded image -->
+                <img src="{{ image_url }}" alt="Uploaded Image">
+            </div>
+            <div class="prediction-result">
+                <h2>{{ result }}</h2>
+                <div class="chicken-animation">
+                    <img src="{{ url_for('static', filename='img/chicken.jpg') }}" alt="Chicken Animation">
+                </div>
+            </div>
+        </div>
+        
+        <a href="{{ url_for('home') }}">Go Back</a>
+    </div>
+</body>
+</html>
